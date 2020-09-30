@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RAdio button</title>
+	<script type="text/javascript">
+		
+    function fn1()
+    {
+       var x = document.getElementById("rd1");
+       var y = document.getElementById("rd2");
+       
+
+       if(x.checked==true)
+        alert("The selected value is : "+x.value);
+
+       else if(y.checked==true)
+       	alert("The selected value is : "+y.value);
+ 
+       else
+       	alert("No channel selected");
+    }
+
+	</script>
+</head>
+<body>
+<input id="rd1" type="radio" name="grp1" value="Sketo Infotech">Sketo Infotech</input>
+<br>
+<input id="rd2" type="radio" name="grp1" value="Telescop Learning">Telescop Learning</input>
+<br>
+<button onclick="fn1()">press me</button>
+</body>
+</html>

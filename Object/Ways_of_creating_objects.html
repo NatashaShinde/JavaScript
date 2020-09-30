@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geeky shows</title>
+</head>
+<body>
+	<h3>Ways of creating objects</h3>
+   <script type="text/javascript">
+   	 
+   	  // Object Literals:
+   	  //IF u want single object then use Object Literals, Object Literal Declare & Inintialisation & Object constructor.
+   	  //esme agr or objects ki jarurt pdtie to essi tarike se or objects or unka property define krna pdega.
+   	  //kbhi kbhi aise situation aatie ki property same ho bs hme objects bhot sare chahie to usme yeh object literals kaam nhi aaega.
+   	  //smzo yahi rahul muje seminar vale object me bhi chahie to code redandant hoga. yahi data mtlb yahi Rahul kisi or object me use nahi ho skta. 
+   	  var fees = {};  //esse sirf 1 object bna sktye.
+   	  fees['Rahul'] = 200;
+
+   	  // Object Literal Declare & Inintialisation
+   	  var fees = {Rahul: 200}; //esse sirf 1 object bna sktye.
+
+   	  // Object constructor
+   	  var fees = new Object(); //esse sirf 1 object bna sktye.
+
+
+
+
+
+
+
+
+   	  // Factory function:
+   	  //IF u want multiple objects with same properties then use Factory function & Constructor Function.
+   	  //Yaha same data or property multiple objects ke lie use kr skte hey.
+   	  function mobile(){      //esse multiple objects bna sktye.
+           return { model: 'Galaxy' }; //yeh same data sb object ke lie avialable hotae.
+   	  }
+
+      var samsung = model(); //object 1
+      var Nokia = model(); //object 2
+
+
+
+   	  //Constructor Function
+   	   function mobile(){
+   	   	this.model: 'Galaxy'; //Yeh property sb object ke lie available hotie.
+   	   }
+ 
+       var samsung = new mobile();  //object 1
+       var Nokia = new mobile();  //object 2
+   	  
+      //constructor ko annonymous function bna do, or usse 1 variable me assign krdo to woh class bnega.
+       var Mobile = function(){  //here class is Mobile
+   	   	   this.model: 'Galaxy'; //Yeh property sb object ke lie available hotie.
+   	   }
+ 
+       var samsung = new mobile();  //object 1
+       var Nokia = new mobile();  //object 2
+
+   </script>
+</body>
+</html>

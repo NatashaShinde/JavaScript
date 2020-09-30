@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forEach()</title>
+</head>
+<body>
+   <h1>Type: 1</h1>
+	<h3>SYNTAX: ArrayName.forEach(whole function);</h3>
+   <p>when we want to create new array for result then take xtra variable like sum</p>
+   <script type="text/javascript">
+        //create an array of numbers
+   	  var numbers = [1,2,3,4,5];
+
+        //create variable to hold the sum
+        var sum = 0;
+
+        //Loop over the array, incrementing the sum variable
+        numbers.forEach(function(number)
+         { 
+            sum += number;
+         });
+        
+        //Print the sum variable
+        //sum;
+        console.log(sum);
+
+   </script>
+</body>
+</html>
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+   <title>forEach()</title>
+</head>
+<body>
+   <h1>Type: 2</h1>
+   <h3>SYNTAX: ArrayName.forEach(function name);  <br />and function is outside forEach loop</h3>
+   <p>when we want to create new array for result then take xtra variable like sum</p>
+   
+   <script type="text/javascript">
+        //create an array of numbers
+        var numbers = [1,2,3,4,5];
+
+        //create variable to hold the sum
+        var sum = 0;
+
+        function adder(number){
+         sum += number;
+        }
+
+        //Loop over the array, incrementing the sum variable
+        numbers.forEach(adder);  //after functioning values comes in forEach loop
+        
+        //Print the sum variable
+        //sum;
+        console.log(sum);
+
+   </script>
+</body>
+</html> -->

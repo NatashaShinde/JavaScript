@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GET & set attribute</title>
+</head>
+<body>
+	<h3>SYNTAX:Element.setAttribute('name','value');</h3>
+	<p id="myp" class="myclass" style="background-color: red; font-size: 50px;">This is paragraph</p>
+   <script type="text/javascript">
+   	 
+   	// SET attribute:
+   	var p = document.getElementById('myp');
+   	console.log(p);
+
+   	//lets change class value from 'myclass' to 'myclassGeekyShows'
+   	p.setAttribute('class','myclassGeekyShows'); //rarely used method
+   	p.setAttribute('title', 'mytitle');
+   	console.log(p);
+
+   	//OR
+    p.className = "myclassGeekyShows"; //mostly used
+    p.style.fontStyle = "italic";
+    console.log(p);  
+
+
+    // GET attribute:
+    var getAtr = p.getAttribute('id'); //id ka jo b value hey woh get hokr milega.  
+    console.log(getAtr);
+
+    console.log(p.id); //this single line also used for same purpose.
+   </script>
+</body>
+</html>

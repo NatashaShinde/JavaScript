@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form validations</title>
+	<script type="text/javascript">
+		
+     function validate()
+     {
+     	var username = document.getElementById("uname");
+     	var password = document.getElementById("pass");
+
+     	if(username.value.trim() =="") // VARIABLE USERNAMEs
+     	{
+     		// alert("blank username !");
+     		uname.style.border = "solid 3px red";
+     		document.getElementById("lbluser").style.visibility="visible";
+     		return false;
+     	}
+     	else if(password.value.trim() =="")
+     	{
+     		alert("blank password !");
+     		return false;
+     	}
+     	else if(password.value.trim().length<5) //password length should be min 5
+     	{
+     		alert("password is too short !");
+     		return false;
+     	}
+     	else
+     	{
+     		return true;
+     	}
+     }
+	</script>
+</head>
+<body>
+<form onsubmit="return validate()" action="message.html">  <!-- on submission call validate function -->
+	<input id="uname" type="text" placeholder="username"></input>
+	<label id="lbluser" style="color: red; visibility: hidden;">Invalid</label>
+	<br>
+	<input id="pass" type="password" placeholder="password"></input>
+	<br>
+	<button onclick="validate()" type="sumit">submit</button>
+</form>
+</body>
+</html>

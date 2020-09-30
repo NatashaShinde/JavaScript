@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>map()</title>
+</head>
+<body>
+  <P>Object mese value nikalkr koi naya array bnana ho to MAP() function use hotae.</P>
+	<p>syntax same as forEach loop</p>
+	<p>return keyword inside mapping function is mandatory.</p>
+   <script type="text/javascript">
+   	  var numbers = [1,2,3];
+   	  var doubleNumbers = [];
+
+   	  // for (var i = 0; i < numbers.length; i++) {
+   	  //     doubleNumbers.push(numbers[i] * 2);
+   	  // }
+      // console.log(doubleNumbers);  used for loop
+      
+      var doubled = numbers.map(function(number)
+      	{
+      		return number * 2;
+      	});
+           console.log(doubled);
+   </script>
+</body>
+</html>

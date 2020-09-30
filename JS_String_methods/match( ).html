@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS String method</title>
+</head>
+<body>
+<h3> match():</h3>
+<p>same as includes() only difference is, it returns search word with new array creation.</p>
+
+<script type="text/javascript">
+	var str = "javascript is a GREAT is language !";
+
+	   var a = str.match(/is/g);      // here /is/ means REGULAR EXPRESSION used. & In between those slashes you have to write the word which you want to search from existing string.
+	   // And /g means it search globally in string , means search for 1st "is" then go forword to seach another "is". 
+
+	   // var a = str.includes("Yahoo");  //result is false bcoz it is not there in the string
+       
+	document.write(a);
+</script>
+
+</body>
+</html>

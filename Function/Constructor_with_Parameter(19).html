@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Constructor in js</title>
+</head>
+<body>
+	<p>Constructor with parameter</p>
+   <script type="text/javascript">
+
+   	  function Mobile(model_no) {  //Model no is parameter, mtlb user dega modelNo
+   	  	        this.model = model_no; //edhr model_no aaega jaise ki galaxy,3310,5110
+                 // Here this.model means samsung.model, nokia.model, or lg.model
+   	  	        this.price = function(){ 
+   	  		console.log(this.model + " Price is Rs.3000"); //samsung.galaxy
+   	  	};
+   	  }
+
+   	  var samsung = new Mobile('Galaxy');  //object instance
+   	  samsung.price();
+
+   	  var nokia = new Mobile('3310');
+   	  nokia.price();
+
+   	  var lg = new Mobile('5110');
+   	  lg.price();
+
+   </script>
+</body>
+</html>

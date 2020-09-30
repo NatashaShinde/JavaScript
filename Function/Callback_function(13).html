@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create & call function</title>
+</head>
+<body>
+  <!--  <script type="text/javascript">
+
+   	
+      function show(a) //yeh parameter ke lie kon argument pass krega eslie hum var a=100; use kia.
+   	  {
+   	  	document.write("I`m show function:  " + a);
+   	  }
+
+            function geeky(callback)
+               {
+                  var a = 100;
+                  callback(a);
+               }
+
+        geeky(show); //niche wale example me yeh show ke jagah uppr vala pura function replace hoga. 
+
+   </script> -->
+
+
+
+
+<!-- 
+   <script type="text/javascript">
+         
+      function show(a)
+        {
+         document.write("I`m show function:  " + a);
+        }
+
+            function geeky(a,callback)
+               {
+                  callback(a); //without variable declaration
+               }
+
+        geeky(101,show);
+   </script> -->
+
+
+
+<!-- 
+   <script type="text/javascript">
+         
+
+            function geeky(callback)
+               {
+                  var a = 100;
+                  callback(a);
+               }
+
+        geeky(function show(a) //no need to write show,then it can be annonymous function.
+        {
+         document.write("I`m show function:  " + a);
+        });
+   </script> -->
+
+
+
+
+<!-- 
+   <script type="text/javascript">
+         
+
+            function geeky(callback)
+               {
+                  var a = 100;
+                  callback(a);
+               }
+
+        geeky(a => document.write("Im show function:  " + a));
+   </script> -->
+</body>
+</html>

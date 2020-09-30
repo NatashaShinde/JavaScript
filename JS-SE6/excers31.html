@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spreading arrays</title>
+</head>
+<body>
+   <script type="text/javascript">
+ function unshift(array, a, b, c, d, e) {
+  return [a, b, c, d, e].concat(array);
+}
+
+//Answer:
+function unshift(array, a, b, c, d, e){
+	return [array, ...rest];
+}
+
+   </script>
+</body>
+</html>

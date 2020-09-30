@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dumping unused code</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+      function addOffset(style) {
+          if (!style) {
+                  style = {}; 
+                 }
+  
+            style.offset = '10px';
+  
+               return style;
+          }
+
+
+
+
+
+   	// Answer:
+   	    function addOffset(style = {}) {
+              style.offset = '10px';
+
+                 return style;
+         }
+         
+   </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create & call function</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  //Arrow function with parameter
+        var myFunc1 = a => document.write(a + "<br />");  // no need of (a) & {} for single parameter & single statement.
+         
+        myFunc1(10); //10
+
+
+
+        //Arrow function with parameter & block of statements
+        var myFunc1 = a => {
+                document.write(a);  //these 2 lines are block of statement & for this {} itz mandatory
+                document.write("Geeky_shows" + "<br />");  //10 then geeky shows
+             };
+        myFunc1(10); //10
+
+
+
+        //Arrow function with multiple parameters
+        var myFunc2 = (a ,b) => {  // necessary (a,b,c) for multiple parameter
+         document.write(a + " " + b + "<br />");
+        };
+
+        myFunc2(10,20);//10 20
+
+
+
+        //Arrow function with default parameter
+        var myFunc3 = (a, b=50) => {  // no need of (a) for single parameter
+         document.write(a + " " + b + "<br />");
+        };
+
+        myFunc3(10,30); //10 30
+
+
+
+        //Arrow function with Rest parameter
+        var myFunc3 = (a, ...args) => {  // no need of (a) for single parameter
+         document.write(a + " " + args + "<br />");
+        };
+
+        myFunc3(10,30,40,50); //a=10 args=30,40,50        
+   </script>
+</body>
+</html>

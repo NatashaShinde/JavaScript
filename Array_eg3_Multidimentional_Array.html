@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array using loop</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var ary = [
+            ["Harry",18,"male","B.com"],
+            ["Sita",28,"female","B.com"],
+            ["Sam",51,"male","B.com"],
+            ["mary",18,"female","B.com"],
+            ["Sam",51,"male","B.com"],
+          ];
+
+      // document.write(ary[1][2]);
+
+document.write("<table border= '1px' cellspacing='0'>");
+
+for (i=0; i<ary.length; i++)  // for outer loop to display all sub array (ary.length :- bcoz we dnt knw how many sub-arrays will add in future.)
+{ 
+	document.write("<tr>");
+
+	for (j=0; j< ary[i].length; j++)  // for inner loop to display elements of sub arrays (ary[i].length bcoz outer loop is i means (sub array) wo pele row ke andr aagya (row means 1st whole horizontal row) or fir uski length get krnie eslie .length)
+	{
+		document.write("<td>" + ary[i][j] + "</td>");
+	}
+	    document.write("<tr />");
+}
+    document.write("</table>");
+</script>
+
+</body>
+</html>

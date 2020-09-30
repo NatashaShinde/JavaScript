@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Distructing in practice</title>
+</head>
+<body>
+   <h3>Distructing in practice</h3>
+   <script type="text/javascript">
+
+// QUESTION:   	
+   	const profile = {
+  title: 'Engineer',
+  department: 'Engineering'
+};
+
+function isEngineer(profile) {
+  var title = profile.title;
+  var department = profile.department;
+  return title === 'Engineer' && department === 'Engineering';
+}
+
+
+// ANSWER: using ES6
+const profile = {
+  title: 'Engineer',
+  department: 'Engineering'
+};
+
+function isEngineer({title, department }) {
+
+  return title === 'Engineer' && department === 'Engineering';
+}
+   </script>
+</body>
+</html>

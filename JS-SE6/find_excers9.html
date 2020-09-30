@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding Admin Users</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	   var users = [
+  { id: 1, admin: false },
+  { id: 2, admin: false },
+  { id: 3, admin: true }
+];
+
+  var admin = users.find(function(user){
+  	   return user.admin === true;
+  });
+
+  console.log(admin);
+   </script>
+</body>
+</html>

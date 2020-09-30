@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>capturing arguments with spread and rest</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+       const MathLibrary = {         //object
+          calculateProduct(...rest){
+          	console.log('Please use the multiply method instead');
+          	// return a+b;
+          	return this.multiply(...rest);
+          },
+
+          multiply(a,b) {
+          	return a*b;
+          }
+       };
+    </script>
+</body>
+</html>

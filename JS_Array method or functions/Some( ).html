@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>some() in js</title>
+</head>
+<body>
+  <h3>Some(): Check if any of the element in an array pass a test. & with some(function) we have to use function.</h3>
+  <p>IF any value is true then it returns true.</p>
+    <script type="text/javascript">
+    	var ages = [13,56,5,18];  //here only 2 values are true so it gives output true bcoz some is capable for single true value.
+
+    	var b = ages.some(checkAdult);
+    	document.write(b);
+
+    	function checkAdult(age)
+    	{
+    		return age >=18;
+    	}
+    </script>
+</body>
+</html>

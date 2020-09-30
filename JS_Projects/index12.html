@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        ON/OFF toggle
+    </title>
+    <link rel="stylesheet" href="style10.css">
+</head>
+
+<body>
+	<h3 id="bulbdata">ON/OFF toggle</h3>
+	<br>
+	<main class="lightapp">
+		<figure class="lightstyle">
+			<img src="bcg-0.jpg" id="lightid1">
+			<figcaption id="figCap">
+				<p> LIGHT ON  </p>
+			</figcaption>
+		</figure>
+		
+				<figure class="lightstyle">
+			<img src="bcg-0.jpg" id="lightid2">
+			<figcaption id="figCap">
+				<p> LIGHT ON </p>
+			</figcaption>
+		</figure>
+
+				<figure class="lightstyle">
+			<img src="bcg-0.jpg" id="lightid3">
+			<figcaption id="figCap">
+				<p> LIGHT ON </p>
+			</figcaption>
+		</figure>
+	</main>
+
+	<div class="onoffbtn">
+		<label class="switch">
+			<button onclick="tubelight()">toggle</button>
+		</label>
+	</div>
+
+	<script>
+		const tubelight = () => {
+			for(x=1; x<4; x++){
+			let bid = document.getElementById('lightid'.concat(x));
+           if (bid.src.match('bcg-0.jpg')) {
+               bid.src = "bcg-1.jpeg";
+               figCap = document.getElementById('figCap');
+               figCap.addHTML("light on");
+           }else{
+           	bid.src = "bcg-0";
+           	figCap.addHTML("light off");
+           }
+          }
+		}
+	</script>
+</body>
+
+</html>

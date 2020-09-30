@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>some</title>
+</head>
+<body>
+    <script type="text/javascript">
+    	var requests = [
+  { url: '/photos', status: 'complete' },
+  { url: '/albums', status: 'pending' },
+  { url: '/users', status: 'failed' }
+];
+ 
+ var inProgress = requests.some(function(request){
+ 	return request.status === 'pending';
+ });
+
+ console.log(inProgress);
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>when to use arrow function</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  	 /* const team = {
+          members: ['Jane', 'Bill'],
+          teamName: 'Super Squad',
+
+          teamSummary: function(){
+          	return this.members.map(function(member){
+          		return `${member} is on team ${this.teamName}`;   //here this.teamName means 
+          		                                                 // team.teamName
+          	}.bind(this));  //.bind(this) is used to support this.teamName which is undefined.
+          }
+
+  	 };
+
+  	 console.log(team.teamSummary()); */
+
+
+
+
+  	 //same example using arrow function
+  	 const team = {
+          members: ['Jane', 'Bill'],
+          teamName: 'Super Squad',
+
+          teamSummary: function(){
+          	// here automatically this === team
+          	return this.members.map((member) => {
+          		return `${member} is on team ${this.teamName}`;   //here this.teamName means 
+          		                                                  //team.teamName
+          	});  //lets go this
+          }
+
+  	 };
+
+  	 console.log(team.teamSummary());
+
+  </script>
+</body>
+</html>
+

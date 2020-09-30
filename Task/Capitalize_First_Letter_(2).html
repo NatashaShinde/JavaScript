@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capitalize First Letter</title>
+</head>
+<body>
+  <script type="text/javascript">
+    
+    function capitalizeWords(str){
+    let words = str.split(" ").map(word => {  //split is used means words is now array, & word is argument, in front of that is callback function as an argument & {in curly braces whole function is callback function} & map is used to change the content in the array.
+
+    // let firstLetter = word.slice(0,1); //start with 0 & ends with 1 
+    // let restLetters = word.slice(1);  // return everything after the end of the 1
+    // firstLetter = firstLetter.toUpperCase();
+    
+    // return `${firstLetter}${restLetters}`  // using Template string
+
+    return word.charAt(0).toUpperCase() + word.slice(1);
+    });  
+
+
+    // return str;
+    return words.join(" "); // join, array ki alg alg values ko ek value bna detae 
+    }
+
+  	 console.log(capitalizeWords("I woke up early today"));  // & argument pass here
+  	 console.log(capitalizeWords("I went straight to the beach")); 
+
+
+
+/*
+function capitalizeWords(str) {
+
+    	let words = str.split(" ").map(word => {
+    		return word.charAt(0).toUpperCase() + word.slice(1);
+    	});
+    	
+    	return words.join(" ");
+    }
+
+  	 console.log(capitalizeWords("I woke up early today"));  // & argument pass here
+  	 console.log(capitalizeWords("I went straight to the beach")); 
+ */
+
+  </script>
+</body>
+</html>

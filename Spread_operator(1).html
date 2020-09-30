@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spraed operator</title>
+</head>
+<body>
+      <p>reference copy na krke sirf values copy krne ke liye spread operator use hotae.</p>
+   <script type="text/javascript">
+
+   	   var a = [10,20,30];
+   	   var b = [5, ...a, 40, 50]; //spread operator not only copy array values , it can also add new values in the same array.
+
+   	   console.log(a);
+   	   console.log(b);
+
+   </script>
+
+   <script type="text/javascript">
+   	  
+   	   var a = [10,20,30];
+   	   var b = [40, 50];
+   	   var c = [...a, ...b, 70, 80];
+
+   	   console.log(c);
+   </script>
+</body>
+</html>

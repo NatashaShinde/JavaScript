@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spraed operator using object</title>
+</head>
+<body>
+	<p>spraed operator using object</p>
+	<p>reference copy na krke sirf values copy krne ke liye spread operator use hotae.</p>
+   <script type="text/javascript">
+
+   	   var a = {courseName: "Javascript", tutorial: "Geeky_Shows"};
+   	   var b = {...a, duration: "6 months"};
+       a.courseName = "PHP";
+
+       console.log(a);
+   	   console.log(b);
+
+   </script>
+
+
+
+   <script type="text/javascript">
+   	  
+   	   var a = {courseName: "Javascript", tutorial: "Geeky_Shows"};
+   	   var b = { duration: "6 months"};
+   	   var c = {...a, ...b};
+
+   	   console.log(c);
+
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMP = object in js</title>
+</head>
+<body>
+  <h3>VERY Important Concept clear (why used this in function)</h3>
+   <script type="text/javascript">
+   	
+  var a = {
+  	fname : "Yahoo",
+  	lname : "Baba",
+  	age   : 28,
+  	email : "helloyahoo14@babb.com", // LHS denote properties
+
+  	favMovies : ['sholay','krish','hum'],  // array also can be used in object
+
+  	living : {      // core object also used in object
+  		'city' : 'mumbai',
+  		'country' : 'india'
+  	},
+
+  	salary : function(){     //functions also used in object but here it is called as a method.
+  		return 25000;
+  	},
+
+  	fullname : function(){   // same as above function but here we are using properties of given object
+  		return this.fname + " " + this.lname; //here owner of this is var a so here this.fname means a.fname
+  	}
+
+  }
+
+   document.write(a.fname);
+  // document.write(a['fname']); //object ko drctly print nhi kr skte pr uske property k sath usko print kr sktye.
+  // document.write(a.favMovies[1]);
+  // document.write(a.living.city);
+  // document.write(a.salary());
+   //  document.write(a.fullname());
+
+   </script>
+</body>
+</html>

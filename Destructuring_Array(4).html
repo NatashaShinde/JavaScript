@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Destructuring array</title>
+</head>
+<body>
+   <h3>Array Returning from a function</h3>
+   <p>SYNTAX: [x, y, z] = a; </p>
+
+   <script type="text/javascript">
+
+       var arr = [10, 20, 30];
+
+       function show(z){ // arr = [10, 20, 30] = z  
+
+          return z;  //upper ke z ko yaha return krtae.
+       }
+
+    /*  var a = show(arr);  //jo return aayae usse hold krne ke lie variable a. return z ko yaha call kiae.
+       var [value1, value2, value3] = a; or wo z, x me assign hotae. */ 
+
+       var [value1, value2, value3] = show(arr); //shortcut for above 2 lines of code.  
+      //yaha argument me jo hey(arr), wo ek array hey, wo z jo ki parameter hey uske pass jaega.   
+      //sbse pehle show(); call hoga.
+       console.log(value3); 
+
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array using loop- yahoo baba</title>
+</head>
+<body>
+<h3>Type 2 array :- var a = new Array();</h3>
+<script type="text/javascript">
+
+	var Cars = new Array (3); // esse array ko pta chlega ki future me uske andr 3 hi value store hogi, aap isse blank bhi chod skte ho taki aap esme kitne b values store kr skteye.
+
+	for (var g = 0; g < 3; g++) { //user se kitni (yaha 3 lennie) value lenie uss hisab se g < 3
+		Cars[g] = prompt("Enter the value"); // here we want to put geted values in Cars array so, Cars[g]
+	}
+
+
+	document.write("<ul>");
+
+	for (var i=0; i<Cars.length; i++) // array ki jo b length ho 
+	{
+		document.write("<li>" + Cars[i] +"</li>");
+	}
+	document.write("</ul>");
+</script>
+
+</body>
+</html>

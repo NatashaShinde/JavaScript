@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Object</title>
+</head>
+<body>
+	<p>arrays or objects mese values xtract krna chahte hey to, usse destructing boltey.</p>
+  <p>Object Destructuring me sb values ko xtract krna jaruri nahi hey, jitne ke jarurat hey sirf usse bhi aap xtract kr skte ho,<br>
+  or array me jaise space chodna pdta tha vaise yaha koi jarurt nahi hoti.</p>
+	<p>SYNTAX: var {x, y, z} = a; </p>
+
+   <script type="text/javascript">
+   	  
+     var course = {
+           courseName: "javascript",
+           duration: "6Months",
+           Tutorial: "GeekyShows"
+     };
+
+     var {courseName, duration, Tutorial} = course;
+
+     console.log(duration);
+
+   </script>
+
+
+
+
+      <script type="text/javascript">
+      
+     var course = {
+           courseName: "javascript",
+           duration: "6Months",
+           Tutorial: "GeekyShows"
+     };
+
+     var {courseName: cName, Tutorial: faculty} = course;  //you can Rename key name. & can take only 2 values also.
+
+     console.log(faculty);
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Object</title>
+</head>
+<body>
+	<p>arrays or objects mese values xtract krna chahte hey to, usse destructing boltey.</p>
+  <p>Object Destructuring me sb values ko xtract krna jaruri nahi hey, jitne ke jarurat hey sirf usse bhi aap xtract kr skte ho,<br>
+  or array me jaise space chodna pdta tha vaise yaha koi jarurt nahi hoti.</p>
+	<p>SYNTAX: var {x, y, z} = a; </p>
+
+   <script type="text/javascript">
+   	  
+      var a,b;
+      ({a,b} = {a:10, b:20});
+
+      console.log(a); //10
+      console.log(b); //20
+
+   </script>
+
+
+   <script type="text/javascript">
+     
+     var {a,b} = {a:10, b:20};
+     
+      console.log(a);  //10
+      console.log(b);  //20
+   </script>
+
+
+   <script type="text/javascript">
+     var {a,b=20} = {a:10};
+
+      console.log(a);  //10
+      console.log(b);  //20
+   </script>
+
+
+  <script type="text/javascript">
+     var {a=40,b=20} = {a:10};
+     
+      console.log(a);  //10
+      console.log(b);  //20
+   </script>
+
+
+     <script type="text/javascript">
+     var {a:y=40,b:z=20} = {a:10};  //we can rename it.
+     
+      console.log(y);  //10
+      console.log(z);  //20
+   </script>
+</body>
+</html>

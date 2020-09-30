@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template string</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	/* function getMessage() {
+   		const year = new Date().getFullYear();
+
+   		// return "This year is " + year;
+   		   return `This year is ${year}`; // ES6 template string
+   	}
+
+   	console.log(getMessage()); */
+
+
+
+   	function getMessage(){
+   		//Any valid expresson can be put inside ${}
+   		return `This year is ${new Date().getFullYear()}`;
+   	}
+
+   	console.log(getMessage());
+   </script> 
+</body>
+</html>

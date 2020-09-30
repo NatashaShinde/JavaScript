@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Object</title>
+</head>
+<body>
+	<p>arrays or objects mese values xtract krna chahte hey to, usse destructing boltey.</p>
+	<p>SYNTAX: var [x, y, z] = a; </p>
+   <script type="text/javascript">
+   	  
+       var a = [10, 20, 30]; 
+       //before array destructuring: a[0]=10, a[1]=20, a[2]=30;
+
+       var [x, y, z] = a; // here a is source. 
+       //after array destructuring: x=10, y=20, z=30;
+
+       console.log(x); //x=10
+   </script>
+
+
+
+   <script type="text/javascript">
+   	  
+   	  var a = ["javascript", "6months", "Geeky"];  // var CourseName = a[0];
+   	                                              // var Duration = a[1];
+   	                                              // var Tutorial = a[2];
+
+   	  var [ CourseName, Duration, Tutorial ] = a; // this is array distructuring.
+
+   	  console.log(CourseName);
+
+   </script>
+</body>
+</html>

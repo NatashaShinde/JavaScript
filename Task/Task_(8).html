@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todays date</title>
+</head>
+<body><h3> WAP to check a given string contains 2 t0 4 occurrences of a specified character.</h3>
+    <script type="text/javascript">
+    
+   const countChars = (str,char) => 
+       str.split('').filter(ch => ch === char).length; //.length give us count of repeated char
+
+   const contains2To4 = (str,char) =>
+       countChars(str, char) >= 2 && countChars(str,char) <=4;
+
+       console.log(contains2To4('Ooooh','o'));
+       console.log(contains2To4('OOpppph','p'));
+       console.log(contains2To4('Ooooooooh','o'));
+
+
+    </script>
+</body>
+</html>

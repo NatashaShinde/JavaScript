@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reducing properties</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  var desks = [
+  { type: 'sitting' },
+  { type: 'standing' },
+  { type: 'sitting' },
+  { type: 'sitting' },
+  { type: 'standing' }
+];
+ 
+//we have to add total sitting so ++obj.sitting
+//we have to add total standing so ++obj.standing
+var deskTypes = desks.reduce(function(obj, desk) {
+    (desk.type === 'sitting') ? ++obj.sitting : (desk.type === 'standing')? ++obj.standing : obj 
+    return obj;
+    
+}, { sitting: 0, standing: 0 });
+
+console.log(deskTypes);
+
+   </script>
+</body>
+</html>
+
+
+
+
+<!-- wrong solution.
+var deskTypes = desks.reduce(function(obj, desk){
+ if (desk.type === 'sitting') {return ++obj.sitting;}
+ if (desk.type === 'standing') {return ++obj.standing;}
+   return obj;
+ }, { sitting: 0, standing: 0 });
+
+ console.log(deskTypes); -->

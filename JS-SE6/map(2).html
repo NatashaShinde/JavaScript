@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>map()</title>
+</head>
+<body>
+   <P>Object mese value nikalkr koi naya array bnana ho to MAP() function use hotae.</P>
+	<p>syntax same as forEach loop</p>
+	<p>return keyword inside mapping function is mandatory.</p>
+   <script type="text/javascript">
+   	 var cars = [
+   	 { model : 'Buick' , price : 'cheap'},
+   	 { model : 'Camaro' , price : 'expensive'}
+   ];
+
+   var prices = cars.map(function(car)  //make a new array called prices
+   	{
+   		return car.price;
+   	});
+
+console.log(prices);
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object in JS</title>
+</head>
+<body>
+	<h3>Type 2 : FUnctions in js using object.</h3>
+<script type="text/javascript">
+	
+	function Cars(car_brand,car_model,price) //passing certain values.
+	{
+		this.car_brand = car_brand; //above values goes on RHS & this.something is the property of object.
+		this.car_model = car_model;
+		this.price = price;
+		
+		this.AutoPiolet = function()                    
+		{
+		    document.write("This car has piolet: ");
+		}
+	}
+
+	var c1 = new Cars("Audi","model 3",35000);
+	var c2 = new Cars("Volvo","model P",45000);
+
+	c1.AutoPiolet();
+	document.write(c2.car_model);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ace your next interview with reduce</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  function balancedParens(string){
+   	  	return string.split("");
+   	  }
+
+   	  console.log(balancedParens("((((")); //["(", "(", "(", "("]
+</script>
+
+---------------------------------------------------------------------------------------------
+
+
+<script type="text/javascript">
+   	  function balancedParens(string){
+   	  	return !string.split("").reduce(function(previous, char){ //char is here (,(,(,(
+   	  		// !string for boolean operation.
+   	  		
+   	  		if (char === "(") {return ++previous;}
+   	  		if (char === ")") {return --previous;}
+   	  		return previous;
+   	  	}, 0);
+   	  }
+
+   	  console.log(balancedParens("(((())))")); //true
+   	  console.log(balancedParens(")(")); //true
+   	  console.log(balancedParens("((((")); //false
+
+   </script>
+
+
+   ------------------------------------------------------------------------------------------
+
+
+
+<script type="text/javascript">
+   	  function balancedParens(string){
+   	  	return !string.split("").reduce(function(previous, char){ //char is here (,(,(,(
+   	  		// !string for boolean operation.
+   	  		if (previous < 0) {return previous;}  //pre -1 < 0 therefore pre = -1 i.e false
+   	  		if (char === "(") {return ++previous;}
+   	  		if (char === ")") {return --previous;}
+   	  		return previous;
+   	  	}, 0);
+   	  }
+
+   	  console.log(balancedParens("(((())))")); //true
+   	  console.log(balancedParens(")(")); //false  ) means -1 so its false, it using 1st If
+   	  console.log(balancedParens("((((")); //false
+
+   </script>
+</body>
+</html>

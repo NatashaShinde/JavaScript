@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regx</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	let regx = /harrysfsdg/;
+	// Lets look into some metacharacter symbols
+	regx = /^h/; //^=carrot: means expression will match if "string starts with"
+	regx = /y$/;  //$ at the end of the string means "string ends with"
+	regx = /h.rry/; // . matches any one character (mtlb "." ke jahag koi or 1 char bhi chlega)
+    regx = /h*rry/; // * matches any 0 or more character
+    regx = /ha?rryi?t/; // (char)? after character means that character is optional
+    regx = /h\*arry/; //  * literally match star
+
+	let str = "harry means codewith";
+	
+	let result = regx.exec(str);
+    console.log("The result from exec is",result);
+
+    if(regx.test(str)){
+    	console.log(`The string ${str} matches the expression ${regx.source}`);
+    }
+    else{
+    	console.log(`The string ${str} does not match the expression ${regx.source}`);
+    }
+
+</script>
+</body>
+</html>

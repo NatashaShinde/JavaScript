@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>get element by tag</title>
+	<script type="text/javascript">
+	
+   function changeStyling()
+   {
+   	var para = document.getElementsByTagName("p");
+   	para[0].style.fontSize= 150;
+   	para[1].style.color = "red";
+   	para[2].style.fontWeight = "bold";
+   	para[3].style.fontStyle = "italic";
+   }
+
+
+	</script>
+</head>
+<body>
+<p>This is paragraph 1</p>
+<p>This is paragraph 2</p>
+<p>This is paragraph 3</p>
+<p>This is paragraph 4</p>
+<p>This is paragraph 5</p>
+
+<br>
+<button onclick="changeStyling()">Click me</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular expressions E00</title>
+<script type="text/javascript">
+	function validate() 
+	{
+		var username = document.getElementById("uname").value;
+		var regx = /E00/i; // i is case sensitive flag. 
+		if(regx.test(username)) 
+		// using test bcoz username checks, Do we have E00 pattern ? If we have pattern it return TRUE else It will return FALSE.
+	   {
+	   	alert("valid username !");
+	   }
+	   else
+	   {
+	   	alert("Invalid Username !");
+	   	document.getElementById("lbluser").style.visibility="visible";
+	   }
+	}
+</script>
+</head>
+<body>
+<form>
+	<input id="uname" type="text" placeholder="username"></input>
+	<label id="lbluser" style="color: red; visibility: hidden;">Invalid</label>
+	<br>
+	<button type="button" onclick="validate()">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Refactoring keyword function</title>
+</head>
+<body>
+	<p>refactor the code below.</p>
+   <script type="text/javascript">
+
+   	const fibonacci = function(n) {
+  if (n < 3) return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+
+
+   	  const fibonacci = n => {
+  if (n < 3) return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+   </script>
+</body>
+</html>

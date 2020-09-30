@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  var trips = [
+  { distance: 34, time: 10 },
+  { distance: 90, time: 50 },
+  { distance: 59, time: 25 }
+];
+
+// var a = trips.map(function(trip)    //not WON THE MATCH ! 
+// 	{
+// 		var speeds = distance / time;
+// 		return trip.speeds;
+// 	});
+//console.log(a);
+
+
+
+var speeds = trips.map(function(val){    //smart method by udemy
+    return (val.distance/val.time);
+});
+
+console.log(speeds);
+   </script>
+</body>
+</html>

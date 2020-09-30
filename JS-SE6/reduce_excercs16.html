@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom unique helper</title>
+</head>
+<body>
+	<P>Write a function called UNIQUE that will remove all the duplicate values from an array.</P>
+   <script type="text/javascript">
+
+   	var numb = [1, 1, 2, 3, 4, 4];
+
+     function unique(array) {
+    return array.reduce(function(prev, numb) {
+        if(prev.indexOf(numb)<0 ) {  //index0<0; index1<0; index2<0
+            
+            prev.push(numb);
+            return prev;
+        }
+        return prev;
+    }, [])
+  
+}
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Constructor in js</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+   	  function Mobile() {  //Mobile is constructor, its 1st letter in Caps but not necessory.
+   	  	this.model = 'galaxy', //this samsung, nokia, lg ko point krtae. i.e samsung.model
+   	  	this.price = function(){ 
+   	  		console.log(this.model + " Price is Rs.3000"); //samsung.model
+   	  	}
+   	  }
+
+   	  var samsung = new Mobile();  //object instance
+   	  samsung.price();
+
+   	  var nokia = new Mobile();
+   	  nokia.price();
+
+   </script>
+</body>
+</html>

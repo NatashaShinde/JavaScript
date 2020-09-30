@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>capturing arguments with spread and rest</title>
+</head>
+<body>
+    <script type="text/javascript">
+    	 
+    	 function addNumbers(...numbers){
+    	 	return numbers.reduce((sum, number) => {
+    	 		return sum + number;
+    	 	}, 0);
+    	 }
+
+    	 console.log(addNumbers(1,2,3,4,5,6,7));
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A touch more of reduce</title>
+</head>
+<body>
+    <script type="text/javascript">
+    	var primaryColors = [
+               {color: 'red'},
+               {color: 'yellow'},
+               {color: 'blue'}
+    	];
+
+    var a =	primaryColors.reduce(function(previousValue, primaryColor){
+    		previousValue.push(primaryColor.color);
+    		return previousValue;
+    	}, []);  //default value coz we passing string
+    
+       console.log(a);
+    </script>
+</body>
+</html>

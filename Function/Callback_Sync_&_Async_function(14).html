@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create & call function</title>
+</head>
+<body>
+   <h3>Synchronous function :</h3>
+   <p>It waits for each operation to complete, <br>after that it executes the next operation.</p>
+   <script type="text/javascript">
+
+      //Synchronous function : 
+        function geeky(callback){
+         var a = 101;
+         callback(a);
+        }
+
+        geeky(function show(a){
+           document.write("Execute first" + a + "<br />");
+        });
+
+        document.write("Execute last");
+   </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create & call function</title>
+</head>
+<body>
+   <h3>Asynchronous function :</h3>
+   <p>It never waits for each operation to complete, <br>rather it executes all operations in the first GO only.</p>
+   <script type="text/javascript">
+
+      //Asynchronous function : 
+
+        setTimeout(function show(){
+           document.write("Execute second" + "<br />");  //execute after 5 second
+        },3000); //aap 3 sec tk ruke raho me aage valon ko execute krta hu
+
+        document.write("Execute first"); //excute first
+   </script>
+</body>
+</html>

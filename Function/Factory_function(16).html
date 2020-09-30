@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factory function</title>
+</head>
+<body>
+    <p>Factory function without parameter</p>
+    <script type="text/javascript">
+
+    	 function mobile() {    //Factory function
+    	 	return {
+    	 		model: 'Galexy',   //properties
+    	 		price:  function(){return "price Rs.3000";}  //Method
+    	 	};
+    	 }
+
+         var samsung = mobile();  //oject 1 = samsung
+         console.log(samsung.model + " " + samsung.price());
+
+         var lg = mobile();  //oject 2 = lg
+         console.log(lg.model + " " + samsung.price());
+
+         var Nokia = mobile();  //oject 3 = nokia
+         console.log(Nokia.model + " " + Nokia.price());
+
+
+    </script>
+</body>
+</html>

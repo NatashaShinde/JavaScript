@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Constructor</title>
+</head>
+<body>
+  <p>object propertires & method using Object Constructor</p>
+  <script type="text/javascript">
+  	 
+  	 var fees = new Object();
+  	 //var fees = { }; equivalent to above line
+
+  	 fees['Rahul'] = 100;            // fees.Rahul = 100;
+     fees['Sumit'] = 200;            // fees.Sumit = 200; 
+     fees['Rohan'] = 300;            // fees.Rohan = 300;
+     
+     fees['total'] = function(){
+     	return (100+200);
+     };
+
+     console.log(fees.total());     //cconsole.log(fees.Rohan);
+
+.................................................................................
+
+     fees.sum = function(){
+      return (100+200);
+     };
+
+     console.log(fees.total());  // also can add new functuion
+  </script>
+</body>
+</html>

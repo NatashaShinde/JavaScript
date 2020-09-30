@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>( also can skip this )Object in JS</title>
+</head>
+<body>
+	<h2>( also can skip this )</h2>
+<script type="text/javascript">
+	
+var Car = {   // Here CAr is Object
+	Car_brand :"Audi",   
+	Car_model : "big",  // All these 3 are its properties.
+	price : 35000,
+
+	AutoPiolet : function()   // here we are taking function inside object therefor it is called as a method 1.
+	{
+		document.write("This car has Autopiolet.");
+	}
+
+}
+/* consider here 100 lines of code
+
+
+
+   and now we want to add one more propert to car. */
+
+Car.fuel_type = "elecric"; //here we are adding one more property of car 
+// delete Car.price; // use delete to delete any property. 
+document.write(Car.fuel_type);
+ // same we can add more methods also in it. as follows.
+
+// Car.AutoPiolet(); // function call here.
+Car.newFunction = function()  // & here we are adding new method2 too of same object Car.
+{
+	document.write("Added new method !")
+}
+</script>
+</body>
+</html>

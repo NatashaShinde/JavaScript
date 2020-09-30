@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>find()</title>
+</head>
+<body>
+     <h3>Find(): this method return all the values of an array that pass a test.<br> And it returns value with a creation of an new array. </h3>
+     <p>In a list of record you have to find one single comment then you can use find() function</p>
+     
+   <script type="text/javascript">
+   	   var posts = [
+             {id: 1, title: 'New Post'},
+             {id: 2, title: 'Old Post'}
+   	   ];
+
+       var comment = { postId: 1, content:'Great Post'};
+
+       function postForComment(posts, comment){
+         return posts.find(function(post){
+            return post.id === comment.postId;
+         });
+
+       }
+
+       console.log(postForComment(posts,comment));
+
+
+
+
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>some() in js</title>
+</head>
+<body>
+  <h3>Every(): Check all of the element in an array pass a test. & with every(function) we have to use function.</h3>
+  <p>IF all values are true then only it returns true otherwise return false.</p>
+   
+    <script type="text/javascript">
+    	var ages = [13,56,5,18];  //here only 2 values are true so it gives output false bcoz every() is capable for whole true value.
+
+    	var b = ages.every(checkAdult);
+    	document.write(b);
+
+    	function checkAdult(age)
+    	{
+    		return age >=18;
+    	}
+
+    </script>
+    
+</body>
+</html>

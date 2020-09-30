@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Every & some in practice</title>
+</head>
+<body>
+   <script type="text/javascript">
+    function Field(value){     //from udemy
+    	this.value = value;
+    }
+
+    Field.prototype.validate = function(){
+    	return this.value.length > 0;
+    }
+
+   	var username = new Field ("2cool");
+   	var password = new Field ("my_password");
+   	var birthdate = new Field ("10/10/2010");
+
+   	  var fields = [username, password, birthdate]; //ek ek ko call krne se better sbko array me lo or ek hi baar me uss arrow ko call kro
+
+   	  var formIsValid = fields.every(function(field){
+   	  	return field.validate();
+   	  });
+     
+      if(formIsValid){
+          // allow user to submit !
+      } else {
+         // show an error message
+      }
+   	  console.log(formIsValid);
+   </script>
+</body>
+</html>

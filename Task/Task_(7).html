@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todays date</title>
+</head>
+<body><h3>given two values, WAP to findout which one is nearest to 100.</h3>
+    <script type="text/javascript">
+   
+       //const nearestTo100 = (a,b) => (100-a)  < (100-b) ? a:b;  
+         function nearestTo100(a,b) {
+         	if ((100-a)  < (100-b)) {
+         		return a;
+         	}
+         	else{
+         		return b;
+         	}
+         }
+        console.log(nearestTo100(50,20));
+        console.log(nearestTo100(73,54));
+        console.log(nearestTo100(99,1));
+    </script>
+</body>
+</html>

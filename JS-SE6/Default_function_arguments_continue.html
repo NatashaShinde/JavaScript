@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dafault function arguments</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	 
+   	 function User(id) {   //when user is created they must be create with id
+   	 	this.id = id;
+   	 }
+
+   	 function generateId() {  //generateId function is specially used to avoid same id
+   	 	return Math.random() * 9999999;
+   	 }
+
+   	 function createAdminUser(user = new User(generateId())) {  //whenver u want to create adminUser you must have to create user & then call createAdminUser
+   	 	user.admin = true;
+
+   	 	return user;
+   	 }
+     
+     const user = new User(generateId());
+   	 console.log(createAdminUser(user));
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regx</title>
+</head>
+<body>
+<script type="text/javascript">
+	let reg = /harry/ //regular expression
+	   reg = /harry/g; //g for globaly search (means pure string me search krega)
+	   reg = /harry/i //i means case insensitive (allow mix => upper & lower case)
+	console.log(reg);
+	console.log(reg.source);
+
+let s = "This is great code with hArry and also HaRry bhai";
+	/*Functions to match regular expressions*/
+	//1. exec() - This function will return an array for match or null for no match.
+	let result = reg.exec(s);
+	console.log(result);
+	console.log(result.input);
+	console.log(result.index);
+/*
+    result = reg.exec(s);
+	console.log(result);
+
+    result = reg.exec(s);
+	console.log(result);*/
+
+</script>
+</body>
+</html>

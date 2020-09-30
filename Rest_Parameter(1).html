@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rest</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  //SYNTAX: function function_Name(a, ...args){}
+   	  //the rest parameter must be the last parameter to a function.
+   	  //REST parameter array ke form me value contain krtae.
+   	  //argument object is similar to rest parameter.
+
+   	  function show(a,b,...args) {
+   	  	console.log(args);   //30,40,50
+   	  	console.log(args[2]); //50
+   	  }
+   	  show(10,20,30,40,50);  //a=10, b= 20, args=20,30,40,50
+   	                         //i.e rest values letae eslie yeh rest parameter hey.
+   </script>
+</body>
+</html>

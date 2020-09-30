@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fetch API - COVID19</title>
+</head>
+<body>
+<h3>Fetch API Thapa tutorial</h3>
+
+<h1>COVID-19 Updates</h1>
+<p id="apiIndia"></p>
+
+<script type="text/javascript">
+	fetch('https://api.covid19api.com/summary')
+	
+	.then( (apiData) => {  //apiData me url ka sara data aagya
+    //console.log(apiData);
+    return apiData.json(); //url ka data JSON format tha, wo ab javaScript object me convert hogya
+	})
+
+	.then( (actualData) => {
+    //console.log(actualData);
+    //console.log(actualData.Countries[76].Country);
+    //document.getElementById('apiIndia').innerHTML =  myData; //show india on screen
+
+    const myData = actualData.Countries[76];  //Countries array hey jo URL se aarae
+    document.getElementById("apiIndia").innerHTML = `The name of The Country is ${myData.Country}. <br />
+        The TotalConfirmed cases here is ${myData.TotalConfirmed} & the TotalDeaths cases here is ${myData.TotalDeaths} & <br /> finally the TotalRecovered cases here is ${myData.TotalRecovered}. `
+	})
+
+    .catch( (error) => {  //promise fullfill nahi hua to catch pkd lega or error dega
+     console.log(`The Error : ${error}`);
+    });
+</script>
+
+</body>
+</html>

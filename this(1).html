@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this in js</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	//now want to display console.log after 3 seconds, so add setatime
+
+
+   	var employee = {   //employee is object , if not getting concept prefer object_part(1)
+        id: 10,       //property of object
+
+        fullname: function(){
+        	  var self = this; 
+       	      setTimeout(function(){console.log(self.id)}, 3000);  //here owner of this is var employee so here this.id means employee.id
+       	      //here this.id is valid only for inner function , so using var self
+            }
+   	};
+   	  employee.fullname(); //object ko drctly print nhi kr skte pr uske property k sath usko print kr sktye.
+   </script>
+</body>
+</html>

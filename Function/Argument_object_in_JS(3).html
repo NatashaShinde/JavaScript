@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create & call function</title>
+</head>
+<body>
+   <!-- <script type="text/javascript">
+   	  function display(name,age)
+   	  {
+             arguments[0] = "hello";
+             document.write(arguments[0] + arguments[1]); //arguments. is the object property
+   	  }
+
+        display('natasha',23);
+   </script> -->
+
+
+
+<!--    <script type="text/javascript">
+      function display(name,age)
+        {
+           var a = arguments.length; //it shows no of arguments in this function
+           document.write(a); 
+        }
+
+        display('natasha',23, 'hello'); // argument1, argument2
+   </script> -->
+
+
+      <script type="text/javascript">
+      function display(name,age)
+        {
+          arguments[1] = 18;   //you can change value
+
+          for(var i=0; i<arguments.length; i++){
+            document.write(arguments[i] + "<br />");
+          } 
+        }
+
+        display('natasha',23, 'hello'); // argument1, argument2
+   </script>
+   
+</body>
+</html>

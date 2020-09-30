@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enhanced object literals</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+   	  function foods (favFood, badFood){
+   	  	return {
+   	  	  // favFood: favFood,  //key: value 
+   	  	  // badFood: badFood
+
+   	  		favFood,   // in es6 you can write this only
+   	  		badFood
+   	  	};
+   	  }
+
+   	  var myFood = foods('Burger', 'nothing');
+   	  console.log(myFood);
+   </script>
+</body>
+</html>

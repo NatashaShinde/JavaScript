@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A lttle Every & a lot of some</title>
+</head>
+<body>
+  <h3>Some(): Check all of the element in an array pass a test.</h3>
+  <p>IF any value is true then it returns true.</p>
+
+   <script type="text/javascript">
+   	   var computers = [
+           {name: 'Apple', ram: 24},
+           {name: 'Compaq', ram: 4},
+           {name: 'Acer', ram: 32},
+   	    ];
+
+var allComputersCanRunProgram = true;
+var OnlySomeComputersCanRunProgram = false;
+
+   	   for (var i = 0; i < computers.length; i++) {   //using for loop 
+   	    	var computer = computers[i];
+
+   	    	if (computer.ram < 16){
+   	    		allComputersCanRunProgram = false;
+   	    	} 
+   	    	else {
+                OnlySomeComputersCanRunProgram = true;
+   	    	}
+   	    }
+   	    console.log(allComputersCanRunProgram);
+   	    console.log(OnlySomeComputersCanRunProgram);
+
+
+
+
+
+
+   	    var a = computers.some(function(computer){
+   	    	return computer.ram > 16;       // using every function
+   	    });
+
+   	    console.log(a); //here only 2 values are true so it gives output false bcoz every() is capable for whole true value.
+   </script>
+</body>
+</html>

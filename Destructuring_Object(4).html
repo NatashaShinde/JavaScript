@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Object</title>
+</head>
+<body>
+  <h3>Object returning from a function</h3>
+	<p>arrays or objects mese values xtract krna chahte hey to, usse destructing boltey.</p>
+  <p>Object Destructuring me sb values ko xtract krna jaruri nahi hey, jitne ke jarurat hey sirf usse bhi aap xtract kr skte ho,<br>
+  or array me jaise space chodna pdta tha vaise yaha koi jarurt nahi hoti.</p>
+	<p>SYNTAX: var {x, y, z} = a; </p>
+
+   <script type="text/javascript">
+
+      var course = {
+          courseName: "javascript",
+          duration: "6Months",
+          tutorial: "GeekyShows"
+      };
+
+      function show(z){
+         return z;  
+      }
+      
+    /* var x = show(course);  //argument me ek object dereye, jo jaega z ke pass.
+                              // object return hoke waps essi ke pass aaega.
+       var {courseName, duration, tutorial} = x;
+     console.log(x.courseName); //old method  */
+
+     var {courseName, duration, tutorial} = show(course); //shortcut for above 2 lines
+
+     console.log(duration);
+   </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+       #outer{
+			background-color: yellow;
+			width: 1000px;
+			height: 500px;
+			padding: 3px;
+		}
+
+		#inner{
+			background-color: pink;
+			width: 800px;
+			height: 300px;
+			margin: 50px 0px 0px 94px;
+
+		}
+
+		#inner div {
+			background-color: white;
+			width: 150px;
+			height: 150px;
+			margin: 0px 6px 3px 0px;
+            display: inline-block;
+            text-align: center;
+		}

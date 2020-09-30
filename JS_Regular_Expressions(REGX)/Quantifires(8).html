@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regx</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//Quantifires: use curly {}
+
+    let regx = /har{2}y/; //r can occur exactly twice
+        regx = /har{0,2}y/; // r can occur exactly 0 t0 2 (0,1,2) times
+
+
+
+
+//Groupings: use paranthesis()
+
+        regx = /(har){2}([0-9]r){3}/; //har + har + 2r + 9r + 6r
+
+	let str = "hay bhai";  //Quantifing
+        str = "harhar3r9r7r bhai"; //grouping
+
+
+
+	
+	let result = regx.exec(str);
+    console.log("The result from exec is",result);
+
+    if(regx.test(str)){
+    	console.log(`The string ${str} matches the expression ${regx.source}`);
+    }
+    else{
+    	console.log(`The string ${str} does not match the expression ${regx.source}`);
+    }
+
+</script>
+</body>
+</html>

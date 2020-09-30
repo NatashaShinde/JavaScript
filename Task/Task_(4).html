@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todays date</title>
+</head>
+<body><h3>WAP to create a new string from a given string taking the first 3 characters & last 3 characters & adding them together.</h3>
+    <script type="text/javascript">
+    	
+       //const makeNewString = (str) => str.length < 3 ? str: str.slice(0,3) + str.slice(-3);
+       
+       function makeNewString(str) {
+       	  if (str.length < 3) {
+       	  	return str; 
+       	  }
+       	  else{
+       	  	return str.slice(0,3) + str.slice(-3);
+       	  }
+       }
+
+
+       console.log(makeNewString('abc'));
+       console.log(makeNewString('abc123'));
+       console.log(makeNewString('abc54'));
+       console.log(makeNewString('abc123abcdef'));
+
+    </script>
+</body>
+</html>

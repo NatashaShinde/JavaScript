@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime number</title>
+</head>
+<body>
+  <p>prime number = can only divide evenly by itself or one.</p>
+  <p>11/2 = 5.5 </p>
+
+  <script type="text/javascript">
+   
+     function isPrime(num) {
+           if (num < 2) {
+              return false;
+           }
+          // modulus % : gives us remainder.
+         let root = Math.ceil(Math.sqrt(num))
+       for(let i=2; i<=root; i++){
+         if(num % i === 0){   //if remainder is 0 then it is not a prime number
+             return false;
+         }
+       }
+
+        return true;
+     }
+
+     console.log(isPrime(8));  //false
+     console.log(isPrime(11));  //true
+     console.log(isPrime(121));  //false
+
+  </script>
+</body>
+</html>

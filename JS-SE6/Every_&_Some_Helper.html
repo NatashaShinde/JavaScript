@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Every & some Helper</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	   var names = [
+             "Alexandria" ,
+             "Mathew",
+             "Joe"
+   	   ];
+
+   	   var a = names.every(function(name){
+   	   	 return name.length > 4;
+   	   });
+
+   	   console.log(a);   // false
+
+
+
+   	   var a = names.some(function(name){
+   	   	 return name.length > 4;
+   	   });
+
+   	   console.log(a);   //true
+   </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unique Values</title>
+</head>
+<body>
+	<h3>Return true only if all values are unique, otherwise false</h3>
+  <script type="text/javascript">
+    
+    
+    // Using Array
+   function Unique(str) {
+   	let values = [];
+   	for (let letter of str){  //for of loop to check indexOf that particular letter
+
+   		 //console.log(values.indexOf(letter)); //for this line, all af them are -1 so, means that the letter is there bcoz we obviously haven`t pushed anything into the array, however if i am gonna change this and we can use spread operator.
+
+   		 //values = [...values,letter] // here in result it checks indexOf that particular era & says all right so you are checking right now with 'a' but a is olrdy in there therefor indexOf will be '0'.
+   		 // as well as if it checks letter on the last one that would 'b', it says ok the 'b' is already there bcoz notice obviously indexOf 1.
+
+   		if (values.indexOf(letter) !==-1) {  //indexOf is gonna let me know the letter is there or not, if index = -1, then everything is fine. (if there is )
+   			return false
+   		}
+        values.push(letter);  //that letter push it into array
+     }
+
+   	 //return str;
+   	 return true;
+   	
+   }
+
+   console.log(Unique("abcde"));
+   console.log(Unique("abacdefb"));  
+
+
+
+/*
+   // Using Object
+   function Unique(str){
+   	let values = {};
+      for(let letter of str){
+
+        if (values[letter]) {
+        	return false;
+        }
+
+        values[letter] = "exists";
+      }
+   	return true;
+   }
+
+   console.log(Unique("abcde"));
+   console.log(Unique("abacdefb"));   */
+
+
+
+/*
+   // Using string method lastIndexOf
+   function unique(str){
+   	for(let i=0; i < str.length; i++){
+   		  if (str.lastIndexOf(str[i]) !== i){
+   		  	return false;
+   	}
+
+   	 return true;
+   }
+
+   console.log(unique("abcde"));
+   console.log(unique("abacdefb"));  */
+  </script>
+</body>
+</html>

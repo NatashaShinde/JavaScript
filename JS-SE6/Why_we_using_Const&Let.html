@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Why_we_using_Const&Let</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+   	  function count(targetString){
+   	  	const characters = ['a', 'e', 'i', 'o', 'u']; //cant change coz const used
+   	  	let number = 0; // let means changes will gonna happen 
+
+   	  	for (var i = 0; i < targetString.length; i++) {
+   	  		if (characters.includes(targetString[i])) {  //if given characters include these targetstring values
+   	  			number++;  //number = 0, then we increment number = 1
+   	  		}
+   	  	}
+
+   	  	return number; // & return number here.
+   	  }
+
+   	  document.write(count('aeiobzxceiaipbiox')); //given characters 
+   	                                             // & count func call here
+
+   </script>
+</body>
+</html>

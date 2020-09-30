@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Longest word</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  	  	 function longestWord(str) {   //str is a parameter here
+
+  	 	let words = str.split(" "); //to find longest word, i have to split the string & using split we create array [I, wokw, up, early]
+  	 	let longestWord = "";  //longestWord store in it.
+
+        // for of loop works same as for loop & here we loop through an array the one that we have over here
+  	 	for( let word of words) {   // array of words (here words is 'Array' & word is 'single single word')
+  	 		//console.log(word);
+
+  	 		if (word.length > longestWord.length) {
+  	 			longestWord = word;
+  	 		}
+  	 	}
+
+      // return str;
+  	 	return longestWord; //returning string that we have passed it
+  	 }
+
+  	 console.log(longestWord("I woke up early today"));  // & argument pass here
+  	 console.log(longestWord("I went straight to the beach"));    
+
+
+/*
+    //Advance code:
+  	 const str = 'the quick brown fox jumped over the lazy dog';
+
+  	 const longestWord = (str) => {
+  	 	const strArray = str.split(' ');
+  	 	const sortedStrArray = strArray.sort(
+  	 		(strA, strB) => {
+  	 			return strB.length - strA.length;
+  	 		}
+
+  	     );
+  	 	return sortedStrArray[0];
+  	 }
+
+  	 console.log(longestWord(str)); */
+
+  </script>
+</body>
+</html>

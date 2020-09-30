@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object literal</title>
+</head>
+<body>
+	<p>Declaration of object: Method using object literal</p>
+   <script type="text/javascript">
+
+   	  var fees = { }; //empty object
+   	     fees['Rahul'] = 100;
+
+         //object ke andr function use kiae to usse method boltey.
+   	     fees['total'] = function(){
+                             return (500 + 200);
+                             };                  //type 1
+
+   	     console.log(fees['total']());
+            
+
+
+   	     fees.total = function(){
+                            return (500 + 200);
+                             };                  //type 2
+
+           console.log(fees.total());
+
+   </script>
+</body>
+</html>

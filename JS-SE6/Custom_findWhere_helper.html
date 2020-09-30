@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom findWhere Helper</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	// Read Hint from udemy
+   	   function findWhere(array, criteria) {
+     return array.find(function(elem) {
+        return elem[Object.keys(criteria)] === criteria[Object.keys(criteria)]
+    })  ;
+}
+var ladders = [
+    {id: 1, height: 20},
+    {id : 3, height: 40}
+
+]
+findWhere(ladders, {height:20});
+   </script>
+</body>
+</html>

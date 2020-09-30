@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get element by Class</title>
+	<script type="text/javascript">
+
+    function changeStyle()
+   {
+   	var element = document.getElementsByClassName("myPara");
+   	
+   	   for (var i =0;  i<element.length; i++) 
+   	 {
+   		element[i].style.color = "red";
+   	 }
+   }		
+	</script>
+    
+</head>
+<body>
+<p class="myPara">This is paragraph 1</p>
+<p>This is paragraph 2</p>
+<a class="myPara" href="#">this is anchor tag.</a>
+<p>This is paragraph 4</p>
+<p class="myPara">This is paragraph 5</p>
+
+<br>
+<button onclick="changeStyle()">click me</button>
+</body>
+</html>

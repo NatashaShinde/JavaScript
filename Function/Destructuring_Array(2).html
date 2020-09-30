@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring array</title>
+</head>
+<body>
+	<p>arrays or objects mese values xtract krna chahte hey to, usse destructing boltey.</p>
+	<p>SYNTAX: [x, y, z] = a; </p>
+   <script type="text/javascript">
+   	  
+   	  var a, b;
+   	  [a, b] = [10, 20];
+
+   	  console.log(a);  //a=10
+
+   </script>
+
+   <script type="text/javascript">
+   	var a, b;
+   	[a, b=20] = [10];
+
+   	console.log(b); //b=20
+   </script>
+
+
+
+
+   <script type="text/javascript">
+   	var a, b;
+   	[a=40, b=20] = [10];
+
+   	console.log(a); //b=20
+   </script>
+</body>
+</html>

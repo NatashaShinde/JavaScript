@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>filter</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  var products = [
+   	      { name: 'cucumber', type:'vegetable' },
+   	      { name: 'banana', type:'fruit' },
+   	      { name: 'celery', type:'vegetable' },
+   	      { name: 'orange', type:'fruit' }
+   	  ];
+
+   	   var filteredProducts = [];
+
+   	  for (var i = 0; i< products.length; i++) {    //using For Loop
+   	  	if(products[i].type === 'fruit'){
+            filteredProducts.push(products[i]);  //here we want to push in new array
+   	  	}
+   	  }
+
+   	  console.log(filteredProducts);
+
+
+
+
+   	var b =  products.filter(function(product)     //using Filter
+   	  	{
+   	  		if(product.type === 'vegetable'){
+   	  		return true;
+   	  	}
+        });
+   	  console.log(b);
+
+
+
+
+        // var a = products.filter(function(product)   //most usable type
+        //  {
+        //    return product.type === 'vegetable';
+        //  });
+        //  console.log (a);
+   </script>
+</body>
+</html>

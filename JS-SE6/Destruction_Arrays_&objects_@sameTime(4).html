@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destruction</title>
+</head>
+<body>
+	<h3>Destructing Arrays & Objects at the same time.</h3>
+     <script type="text/javascript">
+     	
+
+        const companies = [
+            { name: 'Google', location: 'Mountain View' },
+            { name: 'Facebook', location: 'Menio Park' },
+            { name: 'Uber', location: 'San Francisco' }
+        ];
+       
+       //show google location ?
+       //here using old method.
+       //var location = companies[0].location;
+       //console.log(location);
+
+  
+      //ES6
+      const [location] = companies;  //it gives name & location of google as well
+      console.log(location);
+     
+      const [{location}] = companies;  //it gives only location of google.
+      console.log(location);
+     
+     </script>
+</body>
+</html>

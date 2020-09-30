@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dafault function arguments</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	 
+   	  function makeAjaxRequest(url, method = 'GET'){ //if user is not define which method is to use then it automatically set method= get.
+   	  	return method;
+         // if (!method) {   //if there is method is not mantion get or post
+         // 	method = 'GET'; //then method should be get by default
+         // }
+   	  	//logic to make the request
+   	  }
+
+   	  console.log(makeAjaxRequest('google.com', 'GET'));   // GET
+   	  console.log(makeAjaxRequest('google.com', 'POST'));  // POST
+   	  console.log(makeAjaxRequest('google.com', undefined)); // GET
+   	  console.log(makeAjaxRequest('google.com', null)); // then any method wont assign
+   </script>
+</body>
+</html>

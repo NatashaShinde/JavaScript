@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yahoo baba</title>
+</head>
+<body>
+	<h3>Important Concept clear (for return function)</h3>
+<p>map() : object mese value nikal kr koi naya array bnana chahte ho to map() function use hotae. or array me naya value add bhi kr sktye using ...REST operator</p>
+<p>syntax same as forEach loop</p>
+<p>return keyword inside mapping function is mandatory.</p>
+
+<script type="text/javascript">
+
+	var infos = [
+	           {fname: 'rahul' , age: 28},
+	           {fname: 'jay' , age: 45},
+	           {fname: 'sahil' , age: 15}
+	        ];
+   
+   // Lengthy method:
+   var b = infos.map(info); //we are using test function
+   console.log(b);  // And final result getting from here so document.write used here.
+
+
+   function info(x)  // here x means object, it return the values.
+   {
+     return x.fname; 
+   }
+   
+
+   // short method:
+    var a = infos.map(info => `${info.fname}`);
+    console.log(a);
+</script>
+</body>
+</html>

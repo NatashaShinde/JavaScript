@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>create & call function</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+       //Function expression
+       var myFunc1 = function show(a)
+        {
+            return a + "<br />";
+        };
+
+        document.write(myFunc1(10));
+
+
+
+       //Anonymous Function 
+       var myFunc2 = function(b)
+        {
+            return b + "<br />";
+        };
+
+        document.write(myFunc2(20));
+
+
+
+
+       //Arrow Function 
+       var myFunc3 = c => {return c;};
+
+        document.write(myFunc3(20));
+
+
+
+       //Arrow Function 
+       var myFunc3 = c => c;
+
+        document.write(myFunc3(20));
+   </script>
+
+<!-- 
+   var myFun3 = c => c; //work
+   var myFun3 = c => {c}; //wont work
+   var myFun3 = c => {return c;}; //work -->
+
+
+   <script type="text/javascript">
+       
+       //Arrow Function with multiple parameters
+       var myFunc4 = (a,b) => a+b;
+       //var myFunc4 = (a,b) => {return a+b};  //also valid
+
+        document.write(myFunc4(20,40)); //60    
+   </script>
+</body>
+</html>

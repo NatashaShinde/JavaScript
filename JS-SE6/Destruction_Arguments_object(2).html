@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destruction</title>
+</head>
+<body>
+	<h1>IMPORTANT CONCEPT</h1>
+    <script type="text/javascript">
+    	
+    	var saveFiled = {
+                extension: 'jpg',
+                name: 'repost',
+                size: 14040
+    	};
+
+    /*	Old Method:
+        function fileSummary(file){
+    		return `The file ${file.name}.${file.extension} is of size ${file.size}`;
+    	}
+
+        console.log(fileSummary(saveFiled));  */
+
+     //ES6
+
+        function fileSummary({ extension, name, size }, { color }){
+        	return `${color} The file ${name}.${extension} is of size ${size}`
+        }
+
+        console.log(fileSummary(saveFiled, { color: 'red' })); //can add new argument also 
+
+    </script>
+</body>
+</html>

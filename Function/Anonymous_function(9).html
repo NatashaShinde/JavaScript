@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create & call function</title>
+</head>
+<body>
+   <h3>Can be stored in variable</h3>
+   <h3>can be returned in a function</h3>
+   <h3>can be pass in a function</h3>
+
+   <script type="text/javascript">
+     function display(myFunc)
+     {
+       return myFunc(); //ess return ke aage(); lgana jruri hey qki ye call hotae.
+     }
+
+     document.write(display(function()
+     {
+        return "Geeky_shows";
+     }));
+   </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>array</title>
+</head>
+<body>
+  <h3> 9) Has the customer with ID '123' made any orders?
+
+</h3>
+  <script type="text/javascript">
+      
+     const orders = [
+    { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
+        { productId: '123', price: 55 },
+        { productId: '234', price: 30 },
+    ]},
+    { orderId: '234', customerId: '234', deliveryDate: '01-02-2020', delivered: false, items: [
+        { productId: '234', price: 30 },
+    ]},
+    { orderId: '345', customerId: '234', deliveryDate: '05-01-2020', delivered: true, items: [
+        { productId: '567', price: 30 },
+        { productId: '678', price: 80 },
+    ]},
+    { orderId: '456', customerId: '345', deliveryDate: '12-01-2020', delivered: true, items: [
+        { productId: '789', price: 12 },
+        { productId: '890', price: 90 },
+    ]},
+        { orderId: '578', customerId: '456', deliveryDate: '12-01-2020', delivered: true, items: [
+        { productId: '901', price: 43 },
+        { productId: '123', price: 55 },
+    ]},
+];
+
+//Steps for ES6 output:
+//(also can use reduce,filter)
+var a = orders.some(order => order.customerId === '123'); //some():IF any value is true then it returns true.
+console.log(a);
+
+//but if we want actual no of orders, then we have to use filter().
+var a = orders.filter(order => order.customerId === '123' && order.delivered === true);
+console.log(a);
+
+//Normal output:
+var a = orders.some((order) => {
+             return order.customerId === '123';
+ });
+console.log(a);
+
+  </script>
+}
+
+</body>
+</html>

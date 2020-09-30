@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whats your balance </title>
+</head>
+<body>
+   <script type="text/javascript">
+   	  var accounts = [
+  { balance: -10 },
+  { balance: 12 },
+  { balance: 0 }
+];
+
+var account = accounts.find(function(accnt){
+	return accnt.balance === 12;
+});
+
+console.log(account);
+   </script>
+</body>
+</html>

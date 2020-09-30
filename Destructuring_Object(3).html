@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Object</title>
+</head>
+<body>
+  <h3>Object passing to a function</h3><h1>Most important for react</h1>
+	<p>arrays or objects mese values xtract krna chahte hey to, usse destructing boltey.</p>
+  <p>Object Destructuring me sb values ko xtract krna jaruri nahi hey, jitne ke jarurat hey sirf usse bhi aap xtract kr skte ho,<br>
+  or array me jaise space chodna pdta tha vaise yaha koi jarurt nahi hoti.</p>
+	<p>SYNTAX: var {x, y, z} = a; </p>
+
+   <script type="text/javascript">
+
+      var course = {
+          courseName: "javascript",
+          duration: "6Months",
+          tutorial: "GeekyShows"
+      };
+
+     /* function show(a){
+            console.log(a.courseName); // old method
+      } */
+
+      function show({courseName, tutorial}){
+            console.log(tutorial);
+      }
+      
+      show(course);
+      
+   </script>
+</body>
+</html>

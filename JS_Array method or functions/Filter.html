@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filters in js</title>
+</head>
+<body>
+     <h3>Filter(): this method return all the values of an array that pass a test.<br> And it returns value with a creation of an new array. </h3>
+    <script type="text/javascript">
+    	var ages = [50,12,19,20];
+    	
+    	var b = ages.filter(checkAdult);
+        console.log(b);
+
+        function checkAdult(age) 
+        {
+            return age >= 18;
+        }
+
+       
+    </script>
+</body>
+</html>

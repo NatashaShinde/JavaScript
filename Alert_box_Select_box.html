@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select box</title>
+	<script type="text/javascript">
+		
+     function fn1()
+     {
+     	var select=document.getElementById("selectBox"); //use var select is mandatory.
+     	alert(select.options[select.selectedIndex].value) 
+     	// select & option tag is used so select.options then [var select.any index can be select by user so "selectedIndex"]. value which is given in options.
+     }
+
+	</script>
+</head>
+<body>
+<select id="selectBox">
+	<option value="Sketo Infotech"> Sketo Infotech</option>
+    <option value="Squad Academy"> Squad Academy</option>
+    <option value="Telesco Learning"> Telesco Learning</option>
+</select>
+<br>
+<button onclick="fn1()">press me</button>
+</body>
+</html>

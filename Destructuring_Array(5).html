@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Destructuring array</title>
+</head>
+<body>
+   <h3>Nested Array destructuring</h3>
+   <p>SYNTAX: [x, y, z] = a; </p>
+
+   <script type="text/javascript">
+      
+      var a = ["javascript", "6Months", "GeekyShows", ["Rahul", "Sonam"]];
+
+      var [courseName, duration, tutorial, [stud1, stu2]] = a; // a is source.
+
+      console.log(courseName);
+      console.log(stud1);
+
+   </script>
+
+</body>
+</html>

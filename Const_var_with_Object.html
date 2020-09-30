@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>imp : yahoo baba</title>
+</head>
+<body>
+<h3>(IMP concept)</h3>
+<p> If we have used const var & assigned OBJECT in it.<br> & now we want to change the whole array elements, Then<br> It is not going to happen ! <br> So the solution is, Write that const var with array property.<br> Which we want to change. <br> This is how we can change OBJECT value for const variable.</p>
+<script type="text/javascript">
+
+const a = {fname: 'rahul' , age: 28};
+
+a.fname = "Yahoo Baba";  // To change value, we are using const var with its property.
+a.age = 12;
+
+// a = { "sai" , 12 } <-- new object with changed values.
+
+document.write(a.fname);
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body{
+	background: darkslateblue;
+}
+
+.imgBox{
+	background-image: url('JS/JS events/Jellyfish.jpg');
+	position: relative;
+	height: 145px;
+	width: 145px;
+}
+
+.whiteBox{
+	background: white;
+	height: 155px;
+	width: 155px;
+	display: inline-block;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>constructor as a class</title>
+</head>
+<body>
+   <h3>CLASS</h3>
+   <p>Constructor ko hi use krke class bnaya jatae.</p>
+   <p>constructor ko annonymous function bna do, or usse 1 variable me assign krdo to woh class bnega.</p>
+   <h3>EK class me ek hi constructor use hotae.</h3>
+   <script type="text/javascript">
+   	
+   //class Declaration:
+   class Mobile {            // Here mobile is a class name
+   	   constructor() {           // Constructor
+   	   	  // Instance Member
+   	   	      this.a = 12;
+   	   	      this.show = function (){     // Method
+   	   	      	return "Instance Member";
+   	   	      };
+   	   }
+
+   	   // Prototype Member
+   	       display(){
+   	       	  return "Prototype Member";
+   	       }
+   }
+
+   var Samsung = new Mobile();
+   
+     console.log(Samsung.a);
+     console.log(Samsung.display());
+     console.log(Samsung.show());
+   </script>
+</body>
+</html>

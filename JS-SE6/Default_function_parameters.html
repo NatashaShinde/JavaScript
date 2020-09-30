@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Default function parameters</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    	let getValue = function(value=10, bonus=5){  //here value & bonus are default function parameters
+    		console.log(value + bonus);
+    	};
+
+    	getValue();
+    	getValue(20);
+    	getValue(20,30);
+    	getValue(undefined,30);
+    	
+
+
+    	// let getvalue = function(value=10, bonus=value*0.1){
+    	// 	console.log(value + bonus);
+    	// }
+
+    	// getvalue(); //10*0.1= 1; then 10+1=11; so output is 11
+    	// getvalue(20);
+    	// getvalue(20,30);
+
+
+     
+        // let percentBonus = 0.1;
+        // let getvalue = function(value=10, bonus=value*percentBonus){
+    	// 	console.log(value + bonus);
+    	// }
+
+    	// getvalue(); //10*0.1= 1; then 10+1=11; so output is 11
+    	// getvalue(20);
+    	// getvalue(20,30);
+
+
+    	let percentBonus = () => 0.1;
+         let getvalue = function(value=10, bonus=value*percentBonus()){
+    		console.log(value + bonus);
+    		console.log(arguments.length);
+    	}
+
+    	getvalue(); //10*0.1= 1; then 10+1=11; so output is 11
+    	getvalue(20);
+    	getvalue(20,30);
+    </script>
+</body>
+</html>

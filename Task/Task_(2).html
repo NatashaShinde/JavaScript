@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>get the extension</title>
+</head>
+<body>
+<h3>WAP to get the extension</h3>
+<script type="text/javascript">
+
+	const getFileExtension = (str)=> str.slice //here str is a parameter
+	(str.lastIndexOf('.'));   
+
+	console.log(getFileExtension('index.html')); // and this is argument pass to parameter
+	console.log(getFileExtension('webpack.config.js'));
+
+
+	const getFileExtension1 = (str)=> str.slice(str.lastIndexOf('.'));
+	console.log(getFileExtension1 ('google.com'));
+</script>
+</body>
+</html>

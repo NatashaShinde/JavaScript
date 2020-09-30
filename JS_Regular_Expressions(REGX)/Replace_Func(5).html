@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regx</title>
+</head>
+<body>
+<script type="text/javascript">
+	let reg = /harry/g //regular expression
+    let s = "This is great code with harry and also harry bhai"; //match() gives both harry in array
+
+	/*Functions to match regular expressions*/   
+	//5. replace(): Returns new replaced string with all the replacements
+	//(If no global flag is given, first match will be replaced)
+
+   // let  result4 = reg.replace(s); //this is wrong
+      let  result5 = s.replace(reg, 'SHUBHAM'); //this is right
+        console.log(result5);
+</script>
+</body>
+</html>

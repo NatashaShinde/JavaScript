@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task 1</title>
+	<script type="text/javascript">
+		
+function SayHEllo()
+{
+   var x = document.getElementById("text1").value;
+   var y =document.getElementById("text2").value;
+   // alert("value inside text box is : " +x+ "And password is : " +y);
+
+   if(x==y)
+   {
+   	alert("Username & password are matched !");
+   }
+   else{
+   	alert("Username & password are not matched !");
+   }
+}
+
+	</script>
+</head>
+<body>
+	
+<input id ="text1" type="text" placeholder="username">
+<br>
+<input id ="text2" type="password" placeholder="password">
+<button onclick="SayHEllo()">press me</button>
+</body>
+</html>

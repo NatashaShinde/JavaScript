@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>find()</title>
+</head>
+<body>
+     <h3>Find(): this method return all the values of an array that pass a test.<br> And it returns value with a creation of an new array. </h3>
+     
+   <script type="text/javascript">
+   	   var users = [
+             {name: 'Jill'},
+             {name: 'Alex', id: 4},
+             {name: 'Bill'},
+             {name: 'Alex'}
+   	   ];
+
+   	   var user;
+
+   	   for (var i = 0; i < users.length; i++) {     //using for loop
+   	   	    if (users[i].name === 'Alex') {
+   	   	    //user.push(users[i]);  here we dont want to push in new array so itz not working
+   	   	    user = users[i];  //this program compare with filters 1st program
+   	   	    break; //search alex then stop, dont waste time
+   	   	    }
+   	   }
+   	   console.log(user);
+
+
+
+       var a = users.find(function(user){    //using find
+        	return user.name === "Alex";
+        });
+       console.log(a);
+
+
+
+   </script>
+</body>
+</html>

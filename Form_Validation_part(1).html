@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form validations</title>
+	<script type="text/javascript">
+		
+     function validate()
+     {
+     	var username = document.getElementById("uname");
+     	var password = document.getElementById("pass");
+
+     	if(username.value.trim() =="" ||password.value.trim() =="") //trim is used to remove entered spaces.
+     	{
+     		alert("No blank values allowed !");
+     		return false;            //false written bcoz if blank value enter then dont go on message.html page
+     	}
+     	else
+     	{
+          true;  // true written bcoz if both values are entered then go on message.html page
+     	}
+     }
+
+
+	</script>
+</head>
+<body>
+<form onsubmit="return validate()" action="message.html">  <!-- on submission call validate function -->
+	<input id="uname" type="text" placeholder="username"></input>
+	<br>
+	<input id="pass" type="password" placeholder="password"></input>
+	<br>
+	<button onclick="validate()" type="sumit">submit</button>
+</form>
+</body>
+</html>

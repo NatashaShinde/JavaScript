@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3> 5) Replace all question marks (?) with thinking faces (🤔) and exclamation marks (!) with astonished faces (😲) </h3>
+	<h1>Heading</h1>
+<p>Hey, you're not permitted in there. It's restricted. You'll be deactivated for sure.. Don't call me a mindless philosopher, you overweight glob of grease! Now come out before somebody sees you. Secret mission? What plans? What are you talking about? I'm not getting in there! I'm going to regret this. There goes another one. Hold your fire. There are no life forms. It must have been short-circuited. That's funny, the damage doesn't look as bad from out here. Are you sure this things safe?
+
+Close up formation. You'd better let her loose. Almost there! I can't hold them! It's away! It's a hit! Negative. Negative! It didn't go in. It just impacted on the surface. Red Leader, we're right above you. Turn to point... oh-five, we'll cover for you. Stay there... I just lost my starboard engine. Get set to make your attack run.
+
+The Death Star plans are not in the main computer. Where are those transmissions you intercepted? What have you done with those plans? We intercepted no transmissions. Aaah....This is a consular ship. Were on a diplomatic mission. If this is a consular ship...were is the Ambassador? Commander, tear this ship apart until you've found those plans and bring me the Ambassador. I want her alive! There she is! Set for stun! She'll be all right. Inform Lord Vader we have a prisoner.
+
+What a piece of junk. She'll make point five beyond the speed of light. She may not look like much, but she's got it where it counts, kid. I've added some special modifications myself. We're a little rushed, so if you'll hurry aboard we'll get out of here. Hello, sir. Which way? All right, men. Load your weapons! Stop that ship! Blast 'em! Chewie, get us out of here! Oh, my. I'd forgotten how much I hate space travel.
+
+Run, Luke! Run!</p>
+
+   <script type="text/javascript"> 
+    
+    //I need to loop through all of the <p> tags on the page & do that find & replace.
+    //So the way we get all <p> tags on the page is to do a querySelectorAll function, Which will get me all <p> tags & I want to  loop through those as an array but, a querySelectorAll function doesn`t actually return an array.
+    // it returns a node list (child list) so,  I am going to wrap this in the array from function which will convert our node list into an array & with our array, I can call the forEach function.
+    //& i can call replace on the innerHTML property as it is actually a string, But you all notice that only one  of the question mark actually gets replaced with the emoji. & thats bcoz the replace function stops after its found one particular occurrence of the string, that you are looking for. 
+    //so again we can use regx  to continue to match by passing in the global modifier. & now you should see that all of the ? marks have been replaced in the text, & bcoz replace function returns a string itself we can then jst chain on another replace function on top of that, & use that to replace all of the ! marks with the 2nd emoji.
+
+     
+    Array.from(document.querySelectorAll('p')) 
+    .forEach(p => {
+      p.innerHTML = p.innerHTML
+       .replace(/\?/g, '🤔');
+       .replace(/\!/g, '😲');
+    })
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3> 7) Add a required validation to each input that shows an error message next to the entry if it does not have any text entered. </h3>
+	<div class="container mt-2">
+  <h1>Registration Form</h1>
+  <form id="registrationForm">
+    <div class="form-group row">
+      <div class="col">
+        <input id="username" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col">
+        <input id="password" type="password" class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col">
+        <input id="confirmPassword" type="password" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+          <button class="btn btn-primary btn-block">
+            Register
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+   <script type="text/javascript"> 
+
+    
+  document.getElementById('username')
+    .insertAdjacentHTML('beforeBegin', '<label for="username"> Username: </label>');
+
+  document.getElementById('password')
+    .insertAdjacentHTML('beforeBegin', '<label for="password"> Password : </label>');
+
+  document.getElementById('confirmPassword')
+    .insertAdjacentHTML('beforeBegin', '<label for="confirmPassword"> Confirm Password : </label>');
+
+    //Create new function checkInput & this function is going to take in an event object which is passed from an eventListener & we are going to use that to check the condition or the state of the form to decide whether or not we need to put an error message on the page.
+    //so  the 1st i am going to do is check for the existance of any other error elements on the registration form control,
+    // & i am just going to be using a basic <span> to display the error message so this line of code will just look for any <span> tags next to the input element thats just been filled out.
+    // so we are going to check if the value of the input element is blank & i am going to explicity check for an empty string though you could just check if the value is false, & then going  to check if any error elements next to the input.
+    //so if they are on any existing errors, lets add one in there, so we can use the bootstrap text danger class to set our text as read which will highlight it as an error for us & checking the error element length to see if there are any other errors next to the inputs would just prevent the  error message from being repeated.
+    //Of couse we want to remove message once the user has completed the field so lets put something in for that. So we kind of have the reverse if statement here from above so we are assuming that there are errors next to the input & now the input is not blank, so lets get rid of any errors that are there & now all we need to do is set those uo as eventListeners for when the user has removed away from one of the fields & to do that we all set up a listener for the blur event, so lets just try that out on the username field, so you can see by skiping the field and not entering a value, we get the error msg. & if we ebter some text, when we remove away from the field, the error is removed.
+
+    const checkInput = (event) => {
+      const errorElement = Array.from(event.target.parentNode.querySelectorAll('span'));
+
+      if (event.target.value === '' && !errorElement.length) {
+        event.target.insertAdjacentHTML('afterEnd','<span class="text-danger">Required</span>')
+      }
+
+      if (errorElement && event.target.value !== '') {
+         errorElement.forEach(elem => elem.remove());
+      }
+    };
+
+    document.getElementById('username')
+      .addEventListener('blur', checkInput);
+
+    document.getElementById('password')
+      .addEventListener('blur', checkInput);
+
+    document.getElementById('confirmPassword')
+      .addEventListener('blur', checkInput);
+   </script>
+</body>
+</html>

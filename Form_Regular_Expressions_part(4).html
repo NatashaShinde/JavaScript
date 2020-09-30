@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular expressions E00</title>
+<script type="text/javascript">
+	function validate()
+	{
+		var text = document.getElementBYId("text1").value;
+		var regx = /^([a-z 0-9\.-]+)@([a-z 0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/; // '+' is for any length & ^ case sensistive & '?' means last bracket() is optional & '$' is for end string.
+
+		if(regx.test("text"))
+		{
+			document.getElementBYId("lbltext").innerHTML = "Valid";
+			document.getElementBYId("lbltext").style.visibility="visible";
+			document.getElementBYId("lbltext").style.color = "green";
+		}
+		else
+		{
+
+			document.getElementBYId("lbltext").innerHTML = "Invalid";
+			document.getElementBYId("lbltext").style.visibility="visible";
+			document.getElementBYId("lbltext").style.color = "red";
+		}
+	}
+</script>
+</head>
+<body>
+<form>
+	<input id="text1" type="text" placeholder="email"></input>
+	<label id="lbltext" style="color: red; visibility: hidden;">Invalid</label>
+	<br>
+	<button type="button" onclick="validate()">Submit</button>
+</form>
+</body>
+</html>

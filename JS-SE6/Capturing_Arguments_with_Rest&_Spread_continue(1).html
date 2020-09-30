@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>capturing arguments with spread and rest</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    	function validateShoppingList(...items) {
+    		if (items.indexOf('milk') < 0 ) {     
+    				return ['milk', ...items ];  //console.log
+    		}
+    	}
+
+    	validateShoppingList('oranges', 'bread', 'eggs');
+    </script>
+</body>
+</html>

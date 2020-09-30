@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>array</title>
+</head>
+<body>
+  <h3>5) How many people are there in each department?</h3>
+  <script type="text/javascript">
+      
+      const people = [
+    { firstName: 'Sam', lastName: 'Hughes', DOB: '07/07/1978', department: 'Development', salary: '45000' },
+    { firstName: 'Terri', lastName: 'Bishop', DOB: '02/04/1989', department: 'Development', salary: '35000' },
+    { firstName: 'Jar', lastName: 'Burke', DOB: '11/01/1985', department: 'Marketing', salary: '38000' },
+    { firstName: 'Julio', lastName: 'Miller', DOB: '12/07/1991', department: 'Sales', salary: '40000' },
+    { firstName: 'Chester', lastName: 'Flores', DOB: '03/15/1988', department: 'Development', salary: '41000' },
+    { firstName: 'Madison', lastName: 'Marshall', DOB: '09/22/1980', department: 'Sales', salary: '32000' },
+    { firstName: 'Ava', lastName: 'Pena', DOB: '11/02/1986', department: 'Development', salary: '38000' },
+    { firstName: 'Gabriella', lastName: 'Steward', DOB: '08/26/1994', department: 'Marketing', salary: '46000' },
+    { firstName: 'Charles', lastName: 'Campbell', DOB: '09/04/1977', department: 'Sales', salary: '42000' },
+    { firstName: 'Tiffany', lastName: 'Lambert', DOB: '05/11/1990', department: 'Development', salary: '34000' },
+    { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '03/24/1985', department: 'Office Management', salary: '49000' },
+    { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' },
+];
+
+
+//Steps for ES6 output using map (Type 1):
+var a = people.reduce((accumulator, person) => (
+         {...accumulator, [person.department]: accumulator[person.department] + 1 || 1}
+        ), {});         // [person.dep gives Maeketing, sales, etc :acc[per.dept] gives count]
+console.log(a);
+
+
+//Normal output:
+/*var a = people.reduce((accumulator,person) => ({
+    if (accumulator[person.department] + 1 || 1) {
+        return ...accumulator, [person.department];}
+    }, {});   //initialise accumulator as a blank object, so for each person in the array we are actually going to return a new object,That has the previous value of the accumulator spread back into it.
+    console.log(a);  */
+
+
+// & then we are going to create a computed property based on the persons department value which will then add  1, to as the person will be in this department.
+// so we can say use the accumulator object & access the department property that stored on there so this will be something like marketing or development & add one to its value.
+// prefer to run that code as it is.......... we do get departments listed as properties in the new object, all of the values applied to it are actually not a number bcoz the 1st time we try & add one to that particular property within the accumulator will be no value there, so javascript wont let you add one to another undefined value so 
+
+//all we need to do is say if that property on the accumulator doesnt olrdy exist, set the initial value to 1 , & we can do that with an or statement so this will just ensure that when that new department property is set up on the accumulator and theres no value it will get a default value so now,
+// we can see we have got a list of all of the departments with the number of people that have their department property set to that particular value.
+
+
+  </script>
+}
+
+</body>
+</html>

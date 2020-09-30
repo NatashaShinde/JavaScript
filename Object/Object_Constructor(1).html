@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Constructor</title>
+</head>
+<body>
+  <p>object propertires using Object Constructor</p>
+  <script type="text/javascript">
+  	 
+  	 var fees = new Object();
+     //var fees = { }; equivalent to above line
+     
+  	 fees['Rahul'] = 100;    // type 1   
+     fees['Sumit'] = 200;        
+     fees['Rohan'] = 300;             
+     console.log(fees['Rohan']);    
+
+
+
+
+     fees.Rahul = 100;      // type 2
+     fees.Sumit = 200;
+     fees.Rohan = 300;
+     console.log(fees.Rohan);
+
+     fees.Sonal =500;
+     console.log(fees.Sonal);  // also can add new property 
+
+  </script>
+</body>
+</html>

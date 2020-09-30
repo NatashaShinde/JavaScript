@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create & call function</title>
+</head>
+<body>
+   <!-- <script type="text/javascript">
+   	  function add(a,b,c=70) //here c is default parameter
+   	  {
+   	  	document.write("Value of A:" + a + "</br>");
+         document.write("Value of B:" + b + "</br>");
+         document.write("Value of C:" + c + "</br>");
+   	  }
+
+   	  add(10,20); //10,20,70
+        add(10,20,30); //10,20,30
+        add(10); //10,undefined,70
+   </script> -->
+
+
+
+   <!-- <script type="text/javascript">
+        function add(a,b=70,c) //here b is default parameter, but if you are making b as defalut parameter then its nacessary to make c also default parameter.
+        {
+         document.write("Value of A:" + a + "</br>");
+         document.write("Value of B:" + b + "</br>");
+         document.write("Value of C:" + c + "</br>");
+        }
+
+        add(10,20); //10,20,undefined
+        add(10,20,30); //10,20,30
+        add(10); //10,70,undefined
+   </script> -->
+
+<!-- 
+   <script type="text/javascript">
+        function add(a,b=70,c=50) //here b is default parameter, but if you are making b as defalut parameter then its nacessary to make c also default parameter.
+        {
+         document.write("Value of A:" + a + "</br>");
+         document.write("Value of B:" + b + "</br>");
+         document.write("Value of C:" + c + "</br>");
+        }
+
+        add(10,20); //10,20,50
+        add(10,20,30); //10,20,30
+        add(10); //10,70,50
+   </script> -->
+
+
+
+   <!-- <script type="text/javascript">
+        function add(a,b,c=null) //here b is default parameter, but if you are making b as defalut parameter then its nacessary to make c also default parameter.
+        {
+         document.write("Value of A:" + a + "</br>");
+         document.write("Value of B:" + b + "</br>");
+         document.write("Value of C:" + c + "</br>");
+        }
+
+        add(10,20); //10,20,null
+        add(10,20,30); //10,20,30
+        add(10); //10,undefined,null
+   </script> -->
+
+
+
+   <!-- <script type="text/javascript">
+        function add(num, a=[101]) 
+        {
+         document.write("Value of A:" + num + "</br>");
+         document.write("Value of B:" + a[0] + "</br>");
+        }
+        add(); //UNDEFINED , 101
+        add(20, [10]); //20,10
+   </script> -->
+
+
+
+     <script type="text/javascript">
+        function add(num, a=['hello','world']) 
+        {
+         document.write("Value of A:" + num + "</br>");
+         document.write("Value of B0:" + a[0] + "</br>");
+         document.write("Value of B1:" + a[1] + "</br>");
+        }
+        add(); //UNDEFINED , hello, world
+        add(20, [10,40]); //20,10,40
+   </script>
+
+</body>
+</html>

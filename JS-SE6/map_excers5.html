@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+   <script type="text/javascript">
+
+        
+   	function pluck(array, property) 
+    {
+        var a = array.map(function(elem){
+
+              if(elem.hasOwnProperty(property)){
+              return(elem[property]) //we can access property of object by using[] notation.
+                  }
+           })
+        return a;
+    }
+
+   </script>
+</body>
+</html>

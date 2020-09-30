@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this in js</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	var employee = {   //employee is object , if not getting concept prefer object_part(1)
+        id: 10,       //property of object
+
+        fullname: function(){
+       	      console.log(this.id);
+            }
+   	};
+   	  employee.fullname(); //object ko drctly print nhi kr skte pr uske property k sath usko print kr sktye.
+   </script>
+</body>
+</html>

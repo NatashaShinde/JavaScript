@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regx</title>
+</head>
+<body>
+<script type="text/javascript">
+	let reg = /harry/g //regular expression
+    let s = "This is great code with harry and also harry bhai"; //match() gives both harry in array
+
+	/*Functions to match regular expressions*/   
+	//4. search() - Returns index of first match else -1.
+
+   // let  result4 = reg.search(s); //this is wrong
+      let  result4 = s.search(reg); //this is right
+        console.log(result4);
+</script>
+</body>
+</html>

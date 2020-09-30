@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Object</title>
+</head>
+<body>
+  <h3>Nested Object Destructuring</h3>
+	<p>arrays or objects mese values xtract krna chahte hey to, usse destructing boltey.</p>
+  <p>Object Destructuring me sb values ko xtract krna jaruri nahi hey, jitne ke jarurat hey sirf usse bhi aap xtract kr skte ho,<br>
+  or array me jaise space chodna pdta tha vaise yaha koi jarurt nahi hoti.</p>
+	<p>SYNTAX: var {x, y, z} = a; </p>
+
+   <script type="text/javascript">
+
+      var course = {
+          courseName: "javascript",
+          duration: "6Months",
+          tutorial: "GeekyShows",
+
+          student: {
+            stud1: "Rahul",
+            stud2: "Sonal"
+          }
+      };
+
+     var {courseName, duration, tutorial, student: {stud1, stud2} } = course; //here course is a source.
+
+     console.log(duration);
+     console.log(stud1);
+
+
+
+     //old method:
+     console.log(course.duration);
+     console.log(course.student.stud1);     
+   </script>
+</body>
+</html>
